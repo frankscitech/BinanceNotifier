@@ -45,3 +45,11 @@ if __name__ == '__main__':
 	client=conn_client(api_key,api_secret)
 
 	print(get_price(client,'BTCUSDT'))
+
+	#print(client.get_exchange_info())
+
+	#candles = client.get_klines(symbol='BTCUSDT', interval=Client.KLINE_INTERVAL_5MINUTE)
+
+	info=client.get_all_tickers()
+	for elem in info:
+		print(elem)
